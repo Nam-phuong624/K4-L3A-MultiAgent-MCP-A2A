@@ -30,7 +30,7 @@ class OrderLogisticsAgent:
         result = OrderLogisticsResult(
             order_id=order_id,
             order_status="unknown",
-            order_ids=[order_id] if order_id else [],
+            order_ids=[order_id] if order_id else [], // Danh sách order_id liên quan (có thể nhiều hơn 1 nếu có cross-sell)
         )
 
         if not order_id:
